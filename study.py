@@ -16,13 +16,13 @@ def open_vscode():
 def open_notepad():
     subprocess.Popen(notepad_path)
 
-# Example usage
+#Main code
+work_minutes = int(input("how many minutes do you want to work for?   "))
+break_minutes = int(input("how many minutes do you want to take a break for?   "))
+timer = PomodoroTimer(work_minutes,break_minutes)
 youtube_url = "https://www.youtube.com/watch?v=jfKfPfyJRdk&ab_channel=LofiGirl" 
 open_webpage(youtube_url)
 open_vscode()
 open_notepad()
 
-work_minutes = int(input("how many minutes do you want to work for?   "))
-break_minutes = int(input("how many minutes do you want to take a break for?   "))
-timer = PomodoroTimer(work_minutes,break_minutes)
 timer.root.mainloop()
